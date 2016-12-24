@@ -1,7 +1,19 @@
-import * as wjcMetafactory from 'wijmo/wijmo.metaFactory';
+/*
+    *
+    * Wijmo Library 5.20163.234
+    * http://wijmo.com/
+    *
+    * Copyright(c) GrapeCity, Inc.  All rights reserved.
+    *
+    * Licensed under the Wijmo Commercial License.
+    * sales@wijmo.com
+    * http://wijmo.com/products/wijmo-5/license/
+    *
+    */
 import * as ng2 from '@angular/core';
 import { ChangeDetectionStrategy, ViewEncapsulation, Injector } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
+import * as wjMetaBase from "wijmo/wijmo.metaFactory";
 export declare var WjComponent: (options: {
     wjIsDirective?: boolean;
     wjMetadataId?: any;
@@ -48,11 +60,11 @@ export declare type EventProperties = EventPropertiesItem[];
 export declare class DirectiveTypeData {
     private _fwdResolved;
     private static _siblingIdCounter;
-    metaData: wjcMetafactory.MetaDataBase;
+    metaData: wjMetaBase.wj.interop.MetaDataBase;
     changeEventMap: EventProperties;
     private _parentDirectives;
     siblingId: string;
-    constructor(metaData: wjcMetafactory.MetaDataBase, changeEventMap: EventProperties, parentDirectives: any[], siblingId: string);
+    constructor(metaData: wjMetaBase.wj.interop.MetaDataBase, changeEventMap: EventProperties, parentDirectives: any[], siblingId: string);
     readonly parentDirectives: any[];
     private _resolveForwardDeclarations();
 }
@@ -114,7 +126,7 @@ export declare class Ng2Utils {
     private static getChangeEventNameImplemented(propertyName);
     private static getChangeEventNameExposed(propertyName);
     private static getWjEventNameImplemented(eventName);
-    static getChangeEventMap(metaData: wjcMetafactory.MetaDataBase): {
+    static getChangeEventMap(metaData: wjMetaBase.wj.interop.MetaDataBase): {
         event: string;
         eventImpl: string;
         props?: {
